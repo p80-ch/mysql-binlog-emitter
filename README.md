@@ -162,9 +162,9 @@ No  | Name
 No  | Name | Description 
 --- | ---- | --- 
 37  | ROWS_EVENT                   | Emitted on WRITE/UPDATE/DELETE-ROWS_EVENT 
-38  | WRITE_ROWS_EVENT             | Emitted on WRITE_ROWS_EVENT/v0/v1/v2;  <br/>Changes the packet.eventType. 
-39  | UPDATE_ROWS_EVENT            | Emitted on UPDATE_ROWS_EVENT/v0/v1/v2; <br/>Changes the packet.eventType. 
-40  | DELETE_ROWS_EVENT            | Emitted on DELETE_ROWS_EVENT/v0/v1/v2; <br/>Changes the packet.eventType. 
+38  | WRITE_ROWS_EVENT             | Emitted on WRITE_ROWS_EVENT/v0/v1/v2;  <br/>Changes the packet.eventType 
+39  | UPDATE_ROWS_EVENT            | Emitted on UPDATE_ROWS_EVENT/v0/v1/v2; <br/>Changes the packet.eventType 
+40  | DELETE_ROWS_EVENT            | Emitted on DELETE_ROWS_EVENT/v0/v1/v2; <br/>Changes the packet.eventType 
 
 
 ## Packet
