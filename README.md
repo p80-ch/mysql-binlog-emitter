@@ -96,77 +96,73 @@ mbe.start();
 
 
 ## Events
-No  | Name              | Data              | .
---- | ----------------- | ----------------- | ---
-100 | ANY               | EventType, Data   | Wildcard event; Emitts all events incl. BinlogEvents.
-|
+No  | Name              | Data              | . 
+--- | ----------------- | ----------------- | --- 
+100 | ANY               | EventType, Data   | Wildcard event; Emitts all events incl. BinlogEvents. 
 101 | CONNECTED         |                   | 
 102 | DISCONNECTED      |                   | 
 103 | RECONNECTING      |                   | 
 104 | RECOVERING        |                   | 
-|
-110 | BINLOG            | Packet            | Emits all BinlogEvents, except skipped one's
-111 | SKIP              | Packet            | Emits a packet w/out data, when a packet is skipped
-|
+110 | BINLOG            | Packet            | Emits all BinlogEvents, except skipped one's 
+111 | SKIP              | Packet            | Emits a packet w/out data, when a packet is skipped 
 120 | TIMEOUT           |                   | 
 121 | END               |                   | 
-|
-400 | ERROR             | Error             | Any Error
-401 | ERROR_SQL         | Error             | SQL Error
-402 | ERROR_COM         | Error             | SQL Com Error
-403 | ERROR_PARSE       | Error, Packet     | Binlog Parse Error
-404 | ERROR_PARSE_DATA  | Error, Packet     | Binlog Parse Data Error
-405 | ERROR_RECOVER     | Error             | Recover Error; *(Will not stop the emitter from recovering)*
+400 | ERROR             | Error             | Any Error 
+401 | ERROR_SQL         | Error             | SQL Error 
+402 | ERROR_COM         | Error             | SQL Com Error 
+403 | ERROR_PARSE       | Error, Packet     | Binlog Parse Error 
+404 | ERROR_PARSE_DATA  | Error, Packet     | Binlog Parse Data Error 
+405 | ERROR_RECOVER     | Error             | Recover Error; *(Will not stop the emitter from recovering)* 
 
 
 ### BinlogEvents
 As described in [MySQL Internals Manual](https://dev.mysql.com/doc/internals/en/) > [Binlog Event Types](https://dev.mysql.com/doc/internals/en/binlog-event-type.html)
-No | Name
--- | ----
+No | Name 
+-- | ---- 
 0  | UNKNOWN_EVENT 
-1  | START_EVENT_V3
-2  | QUERY_EVENT
-3  | STOP_EVENT
-4  | ROTATE_EVENT
-5  | INTVAR_EVENT
-6  | LOAD_EVENT
-7  | SLAVE_EVENT
-8  | CREATE_FILE_EVENT
-9  | APPEND_BLOCK_EVENT
-10 | EXEC_LOAD_EVENT
-11 | DELETE_FILE_EVENT
-12 | NEW_LOAD_EVENT
-13 | RAND_EVENT
-14 | USER_VAR_EVENT
-15 | FORMAT_DESCRIPTION_EVENT
-16 | XID_EVENT
-17 | BEGIN_LOAD_QUERY_EVENT
-18 | EXECUTE_LOAD_QUERY_EVENT
-19 | TABLE_MAP_EVENT
-21 | WRITE_ROWS_EVENTv0
-22 | UPDATE_ROWS_EVENTv0
-23 | DELETE_ROWS_EVENTv0
-24 | WRITE_ROWS_EVENTv1
-25 | UPDATE_ROWS_EVENTv1
-26 | DELETE_ROWS_EVENTv1
-27 | INCIDENT_EVENT
-28 | HEARTBEAT_EVENT
-29 | IGNORABLE_EVENT
-30 | ROWS_QUERY_EVENT
-31 | WRITE_ROWS_EVENTv2
-32 | UPDATE_ROWS_EVENTv2
-33 | DELETE_ROWS_EVENTv2
-34 | GTID_EVENT
-35 | ANONYMOUS_GTID_EVENT
-36 | PREVIOUS_GTIDS_EVENT
+1  | START_EVENT_V3 
+2  | QUERY_EVENT 
+3  | STOP_EVENT 
+4  | ROTATE_EVENT 
+5  | INTVAR_EVENT 
+6  | LOAD_EVENT 
+7  | SLAVE_EVENT 
+8  | CREATE_FILE_EVENT 
+9  | APPEND_BLOCK_EVENT 
+10 | EXEC_LOAD_EVENT 
+11 | DELETE_FILE_EVENT 
+12 | NEW_LOAD_EVENT 
+13 | RAND_EVENT 
+14 | USER_VAR_EVENT 
+15 | FORMAT_DESCRIPTION_EVENT 
+16 | XID_EVENT 
+17 | BEGIN_LOAD_QUERY_EVENT 
+18 | EXECUTE_LOAD_QUERY_EVENT 
+19 | TABLE_MAP_EVENT 
+21 | WRITE_ROWS_EVENTv0 
+22 | UPDATE_ROWS_EVENTv0 
+23 | DELETE_ROWS_EVENTv0 
+24 | WRITE_ROWS_EVENTv1 
+25 | UPDATE_ROWS_EVENTv1 
+26 | DELETE_ROWS_EVENTv1 
+27 | INCIDENT_EVENT 
+28 | HEARTBEAT_EVENT 
+29 | IGNORABLE_EVENT 
+30 | ROWS_QUERY_EVENT 
+31 | WRITE_ROWS_EVENTv2 
+32 | UPDATE_ROWS_EVENTv2 
+33 | DELETE_ROWS_EVENTv2 
+34 | GTID_EVENT 
+35 | ANONYMOUS_GTID_EVENT 
+36 | PREVIOUS_GTIDS_EVENT 
 
 ***Additional wildcard events***  
-No | Name | Description
+No | Name | Description 
 -- | ---- | --- 
-37 | ROWS_EVENT                   | Emitted on WRITE/UPDATE/DELETE-ROWS_EVENT
-38 | WRITE_ROWS_EVENT             | Emitted on WRITE_ROWS_EVENT/v0/v1/v2;  <br/>Changes the packet.eventType.
-39 | UPDATE_ROWS_EVENT            | Emitted on UPDATE_ROWS_EVENT/v0/v1/v2; <br/>Changes the packet.eventType.
-40 | DELETE_ROWS_EVENT            | Emitted on DELETE_ROWS_EVENT/v0/v1/v2; <br/>Changes the packet.eventType.
+37 | ROWS_EVENT                   | Emitted on WRITE/UPDATE/DELETE-ROWS_EVENT 
+38 | WRITE_ROWS_EVENT             | Emitted on WRITE_ROWS_EVENT/v0/v1/v2;  <br/>Changes the packet.eventType. 
+39 | UPDATE_ROWS_EVENT            | Emitted on UPDATE_ROWS_EVENT/v0/v1/v2; <br/>Changes the packet.eventType. 
+40 | DELETE_ROWS_EVENT            | Emitted on DELETE_ROWS_EVENT/v0/v1/v2; <br/>Changes the packet.eventType. 
 
 
 ## Packet
