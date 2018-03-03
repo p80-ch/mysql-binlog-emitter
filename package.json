@@ -1,10 +1,9 @@
 {
   "name": "mysql-binlog-emitter",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "A nodejs mysql/mariadb slave replication event emitter.",
   "main": "index.js",
-  "scripts":
-  {
+  "scripts": {
     "test": "mocha tst/_index.js"
   },
   "keywords": [
@@ -19,26 +18,21 @@
   "author": "Port:80",
   "contributors": "Stefan Zeller <sz@p80.ch>",
   "license": "MIT",
-  "publishConfig":
-  {
+  "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
-  "repository":
-  {
+  "repository": {
     "type": "git",
     "url": "https://github.com/p80-ch/mocha-streambuffer.git"
   },
-  "bugs":
-  {
+  "bugs": {
     "url": "https://github.com/p80-ch/mocha-streambuffer/issues",
     "email": "github@p80.ch"
   },
-  "dependencies":
-  {
+  "dependencies": {
     "mysql": "^2.15.0"
   },
-  "devDependencies":
-  {
+  "devDependencies": {
     "grunt": "^1.0.2",
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-exec": "^3.0.0",
