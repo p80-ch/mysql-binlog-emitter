@@ -1,0 +1,11 @@
+{
+  "mysql":
+  {
+    "socket": "/var/run/mysqld/mysqld.sock",
+    "user": "MyEmitter"
+  },
+  "binlog":
+  {
+    "values": false
+  }
+}
