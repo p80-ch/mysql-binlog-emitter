@@ -158,6 +158,7 @@ No  | Name
 36  | PREVIOUS_GTIDS_EVENT 
 
 ***Additional wildcard events***  
+
 No  | Name | Description 
 --- | ---- | --- 
 37  | ROWS_EVENT                   | Emitted on WRITE/UPDATE/DELETE-ROWS_EVENT 
