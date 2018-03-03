@@ -34,6 +34,6 @@ describe('Test', function()
   require("./TestData");
   require("./MyEmitter");
   require("./MultiSlave");
-  require("./TestLoad");
+  // require("./TestLoad");
 
 });
