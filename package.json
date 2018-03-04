@@ -23,10 +23,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/p80-ch/mocha-streambuffer.git"
+    "url": "https://github.com/p80-ch/mysql-binlog-emitter.git"
   },
   "bugs": {
-    "url": "https://github.com/p80-ch/mocha-streambuffer/issues",
+    "url": "https://github.com/p80-ch/mysql-binlog-emitter/issues",
     "email": "github@p80.ch"
   },
   "dependencies": {
