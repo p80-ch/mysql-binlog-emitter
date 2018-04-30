@@ -1,7 +1,7 @@
 # mysql-binlog-emitter
 A nodejs mysql/mariadb slave replication event emitter.  
 
-This is a high level implementation of mysql's binary log protocol, _if your are only interested in changes occurring in your database, check out [mysql-event-emitter](https://www.npmjs.com/package/mysql-event-emitter)._
+This is a high level implementation of mysql's binary log protocol, if your are only interested in changes occurring in your database, check out [mysql-event-emitter](https://www.npmjs.com/package/mysql-event-emitter).
 
 \* It is tested against `mariadb 10.1.31` and binlog protocol version 4 \*
 
@@ -232,7 +232,7 @@ mye.stop(function(err){
 
 
 # Credits
-dougwilson: [mysql](https://www.npmjs.com/package/mysql)  
-morgo: [Faking a slave: Subscribing to mysql row-based-replication changes](http://www.tocker.ca/2014/05/26/faking-a-slave-subscribing-to-mysql-row-based-replication-changes.html)  
-siddontang: [Dive into MySQL replication protocol](https://medium.com/@siddontang/dive-into-mysql-replication-protocol-cd14791bcc) and [go-mysql](https://github.com/siddontang/go-mysql)  
-nevill: [ZongJi](https://github.com/nevill/zongji)
+[mysql](https://www.npmjs.com/package/mysql)  
+[Faking a slave: Subscribing to mysql row-based-replication changes](http://www.tocker.ca/2014/05/26/faking-a-slave-subscribing-to-mysql-row-based-replication-changes.html)  
+[Dive into MySQL replication protocol](https://medium.com/@siddontang/dive-into-mysql-replication-protocol-cd14791bcc) and [go-mysql](https://github.com/siddontang/go-mysql)  
+[ZongJi](https://github.com/nevill/zongji)
