@@ -1,6 +1,6 @@
 {
   "name": "mysql-binlog-emitter",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "A nodejs mysql/mariadb slave replication event emitter.",
   "main": "index.js",
   "scripts": {
