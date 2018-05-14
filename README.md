@@ -40,7 +40,9 @@ Give your user the rights to read binary logs
 GRANT REPLICATION SLAVE, REPLICATION CLIENT, SELECT ON *.* TO '[USER]'@'[HOST]'
 ```
 
-Optional: Grant the reload right to be able to reset the binary logs with `MASTER RESET`  
+### Reset Binary Log
+After changing the mysql configuration you may have to run `RESET MASTER` once.  
+To do that your user needs the `RELOAD` right
 ```sql
 GRANT RELOAD ON *.* TO '[USER]'@'[HOST]'
 ```
