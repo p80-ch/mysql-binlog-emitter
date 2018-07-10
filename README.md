@@ -62,7 +62,7 @@ var mbe =  MyBinlogEmitter({
 
 mbe.on(Event.ANY, function(type, ...data){
   console.log(Event.eventName(type));
-}):
+});
 
 mbe.start();
 ```
@@ -209,7 +209,7 @@ mbe.on(BinlogEvent.WRITE_ROWS_EVENTv1, function(packet){
   
   console.log(packet); 
 
-}):
+});
 
 mye.start(function(err){
   console.log('started');
